@@ -164,9 +164,50 @@ a:hover {text-decoration:underline;}
 @keyframes fadeIn {from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);}}
 
 /* ===== Responsive ===== */
-@media(max-width:768px){
+/* @media(max-width:768px){
     .banner h1{font-size:2.2rem;}
     .nav-links{display:none;}
+} */
+@media (max-width: 768px) {
+    /* Banner */
+    .banner {
+        height: 70vh;
+        background-attachment: scroll; /* bỏ fixed */
+    }
+    .banner h1 {
+        font-size: 2rem;
+        white-space: normal;
+        padding: 0 10px;
+    }
+    .banner p {
+        font-size: 1.2rem;
+        padding: 0 15px;
+    }
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+    .banner-content {
+    max-width: 90%; /* giới hạn chiều ngang trên mobile */
+    margin: 0 auto;
+    }
+
+    /* Chatbot */
+    #chatbot-button {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+        bottom: 15px;
+        right: 15px;
+    }
+    #chatbot-container {
+        width: 90%;
+        max-width: 400px;
+        height: 70vh;
+        right: 5%;
+        bottom: 90px;
+        border-radius: 10px;
+    }
 }
 
 /* ===== Nút Chatbot Nổi ===== */
