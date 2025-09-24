@@ -1,0 +1,290 @@
+/* ===== Reset & Base ===== */
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family: 'Segoe UI', Tahoma, sans-serif; line-height:1.6; color:#333; background:#f9f9f9;}
+a {color:#4CAF50; text-decoration:none;}
+a:hover {text-decoration:underline;}
+.section {padding:80px 20px; text-align:center;}
+.section-title {font-size:2rem; margin-bottom:20px; color:hsl(0, 0%, 13%);}
+.section-desc {max-width:800px; margin:auto;}
+
+/* ===== Header ===== */
+.header {position:fixed; top:0; left:0; width:100%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.1); z-index:999;}
+.navbar {max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px;}
+.logo {font-size:1.5rem; font-weight:bold; color:#4CAF50;}
+.logo span {color:#222;}
+.nav-links {list-style:none; display:flex; gap:20px;}
+.nav-links a {font-weight:500; padding:8px 12px; transition:0.3s;}
+.nav-links a:hover {background:#4CAF50; color:#fff; border-radius:6px;}
+
+/* ===== Banner ===== */
+.banner {
+    height:100vh;
+    background:url('../images/main_image.webp') center/cover fixed;
+    display:flex; justify-content:center; align-items:center;
+    text-align:center; color:#fff;
+    position:relative;
+}
+.banner::before {
+    content:""; position:absolute; top:0; left:0; right:0; bottom:0;
+    background:rgba(0,0,0,0.5);
+}
+.banner-content {position:relative; z-index:2; max-width:none; padding:20px;}
+.banner h1 {font-size:3rem; margin-bottom:30px;white-space:nowrap;text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            /* background: linear-gradient(90deg,#ffffff, #f2f2f2); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */}
+.banner p {font-size:2rem; margin-bottom:50px;text-shadow: 1px 1px 3px rgba(0,0,0,0.2);}
+.btn-primary {
+    background:#4CAF50; color:#fff; padding:12px 25px;
+    border-radius:30px; font-weight:bold; transition:0.3s;
+    font-size: 1.5rem;
+}
+.btn-primary:hover {background:#45a049;}
+
+/* ===== Intro ===== */
+.intro.section {
+    margin: 50px auto; /* 60px trên/dưới, canh giữa ngang */
+    padding:40px 20px; /* giống các section khác */
+    max-width:900px;   /* giới hạn chiều rộng */
+    /* margin:0 auto;     canh giữa */
+    text-align:left;   /* văn bản canh trái dễ đọc hơn */
+    line-height:1.8;   /* tăng khoảng cách dòng */
+    color:#333;        /* màu chữ chính */
+    background:#fff;   /* nền nếu muốn nổi bật */
+    border-radius:12px; /* bo góc nhẹ */
+    box-shadow:0 4px 12px rgba(0,0,0,0.1); /* bóng nhẹ */
+}
+
+.intro.section h2 {
+    text-align: center;   /* canh giữa tiêu đề */
+    margin-top: 30px;     /* khoảng cách trên */
+    margin-bottom: 30px;  /* khoảng cách dưới */
+}
+
+.intro.section p {
+    margin-bottom:16px; /* cách giữa các đoạn */
+    font-size:1.1rem;
+}
+
+.intro.section a {
+    color:#007BFF; /* link màu xanh rõ ràng */
+    text-decoration:underline;
+}
+
+.intro.section em {
+    font-style:italic; /* in nghiêng */
+}
+
+.intro.section strong {
+    font-weight:bold; /* in đậm */
+}
+
+@media(max-width:768px){
+    .intro.section {
+        margin-top: 40px;
+        font-size:1rem;
+    }
+}
+
+/* ===== Services ===== */
+.services-container {
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    max-width:1000px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin:auto; */
+    padding:0 20px;
+}
+.service-card {
+    background:#fff; padding:20px; border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card img {width:90%; border-radius:10px; margin-bottom:15px;}
+.service-card:hover {
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+.service-card h3 {margin-bottom:10px; color:#4CAF50;}
+
+/* ===== Contact ===== */
+/* .contact p {margin:10px 0; font-size:1.1rem;} */
+
+/* ===== Contact ===== */
+.contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #333333, #555555);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.contact a {
+    color: #007BFF;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.contact a:hover {
+    color: #0056b3;
+}
+
+
+/* ===== Footer ===== */
+.footer {background:#222; color:#ccc; text-align:center; padding:20px;}
+
+
+/* ===== Animation ===== */
+.fade-in {opacity:0; animation:fadeIn 1s forwards;}
+.fade-in-delay {opacity:0; animation:fadeIn 1.5s forwards 0.3s;}
+.fade-in-delay2 {opacity:0; animation:fadeIn 1.5s forwards 0.6s;}
+@keyframes fadeIn {from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);}}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    .banner h1{font-size:2.2rem;}
+    .nav-links{display:none;}
+}
+
+/* ===== Nút Chatbot Nổi ===== */
+#chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    /* Kiểu dáng */
+    background: linear-gradient(135deg, #4CAF50 0%, #2e8b57 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
+    cursor: pointer;
+
+    /* Hiệu ứng đổ bóng & ánh sáng */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25),
+                0 0 0 0 rgba(76,175,80,0.7);
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.3s ease;
+
+    /* Luôn nổi trên cùng */
+    z-index: 10000;
+}
+
+/* Hover – đổi màu + nảy nhẹ */
+#chatbot-button:hover {
+    background: linear-gradient(135deg, #58d68d 0%, #4CAF50 100%);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3),
+                0 0 20px rgba(88,214,141,0.6);
+}
+
+/* Hiệu ứng rung nhẹ (pulse) */
+@keyframes pulseGlow {
+    0%   { box-shadow: 0 0 0 0 rgba(76,175,80,0.5); }
+    70%  { box-shadow: 0 0 0 15px rgba(76,175,80,0); }
+    100% { box-shadow: 0 0 0 0 rgba(76,175,80,0); }
+}
+#chatbot-button {
+    animation: pulseGlow 2.5s infinite;
+}
+
+/* ===== Hộp Chatbot ===== */
+#chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 95px;     /* Tăng chút để tránh nút */
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+
+    /* Đổ bóng đẹp */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 9999;
+
+    /* Hiệu ứng mở ra */
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+#chatbot-container.active {
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+}
+
+#chatbot-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Floating chatbot button
+#chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+Chatbot iframe container 
+#chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#chatbot-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+} */
+
+
+

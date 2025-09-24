@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://in3dtayninh.com/sitemap.xml
